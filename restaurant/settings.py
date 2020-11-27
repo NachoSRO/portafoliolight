@@ -24,9 +24,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '8v@w(@r0^gdt*_o3b2klw$h#ta^(%!w#w$0$ass1t+6vnp16+q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -86,7 +86,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.oracle',
         'NAME': 'portafolio.cjvfszgmlvra.us-east-1.rds.amazonaws.com:1521/orcl',
-        'USER': 'restaurante',
+        'USER': 'restaurant',
         'PASSWORD': 'duoc2020',
         'TEST': {
             'USER': 'default_test',
