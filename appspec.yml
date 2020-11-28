@@ -6,7 +6,7 @@ files:
 hooks:
   AfterInstall:
     - location: scripts/install_dependencies.sh
-      timeout: 600
+      timeout: 500
       runas: root
     - location: scripts/migrate.sh
       timeout: 1000
