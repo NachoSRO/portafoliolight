@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 class Cliente(models.Model):
     rut = models.CharField(unique=True, max_length=12)
-    nombre = models.CharField(max_length=120)
+    nombre = models.CharField(max_length=125)
     telefono = models.IntegerField()
     
 
