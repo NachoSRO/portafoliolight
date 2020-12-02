@@ -9,11 +9,6 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-        ('cliente', '0002_auto_20201201_0020'),
-        ('receta', '0002_auto_20201201_2146'),
-    ]
-
     operations = [
         migrations.CreateModel(
             name='Carrito',
