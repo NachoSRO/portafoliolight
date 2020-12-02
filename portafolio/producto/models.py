@@ -38,6 +38,7 @@ class Producto(models.Model):
             validators=[MinValueValidator(1)])
     gramaje = models.CharField(choices=GRAMAJE, max_length=30,null=True)
     descripcion = models.TextField(max_length=400,verbose_name="Descripcion del producto")
+    cantidad = models.IntegerField(null=True)
 
     def __str__(self):
         return self.name

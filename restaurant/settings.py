@@ -42,8 +42,10 @@ INSTALLED_APPS = [
     'portafolio.reportes',
     'portafolio.cliente',
     'portafolio.receta',
+    'portafolio.app',
     'widget_tweaks',
     'extra_views',
+    # 'django-compositekey',
 
 ]
 
@@ -95,7 +97,19 @@ DATABASES = {
         },
     },
 }
-
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.oracle',
+#         'NAME': 'localhost/xe',
+#         'USER': 'a22',
+#         'PASSWORD': 'jeison',
+#         'TEST': {
+#             'USER': 'default_test',
+#             'TBLSPACE': 'default_test_tbls',
+#             'TBLSPACE_TMP': 'default_test_tbls_tmp',
+#         },
+#     },
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators

@@ -12,6 +12,8 @@ class Receta(models.Model):
     descripcion = models.CharField('descripcion',max_length=500)
     tipo = models.CharField(choices=TIPO, max_length=30,null=True)
     precio = models.PositiveSmallIntegerField(default=1,verbose_name="precio")
+    cantidad = models.IntegerField(null=True)
+    stock = models.IntegerField(null=True)
 
     class Meta:
         db_table = 'Receta'
