@@ -29,7 +29,6 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('num_persona', models.IntegerField()),
                 ('estado', models.CharField(choices=[('disponible', 'DISPONIBLE'), ('ocupada', 'OCUPADA')], max_length=30, null=True)),
-                ('id_cliente', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='cliente.cliente')),
             ],
             options={
                 'db_table': 'Mesa',

@@ -21,7 +21,7 @@ class Mesa(models.Model):
     )
     num_persona = models.IntegerField()
     estado = models.CharField(choices=ESTADO, max_length=30,null=True)
-    id_cliente = models.ForeignKey(Cliente,on_delete=models.CASCADE)
+    id_cliente = models.ForeignKey(Cliente,on_delete=models.CASCADE,null=True)
 
     class Meta:
         db_table = 'Mesa'
