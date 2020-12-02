@@ -84,25 +84,12 @@ WSGI_APPLICATION = 'restaurant.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.oracle',
-        'NAME': 'portafolio.cjvfszgmlvra.us-east-1.rds.amazonaws.com:1521/orcl',
-        'USER': 'restaurant',
-        'PASSWORD': 'duoc2020',
-        'TEST': {
-            'USER': 'default_test',
-            'TBLSPACE': 'default_test_tbls',
-            'TBLSPACE_TMP': 'default_test_tbls_tmp',
-        },
-    },
-}
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.oracle',
-#         'NAME': 'localhost/xe',
-#         'USER': 'a22',
-#         'PASSWORD': 'jeison',
+#         'NAME': 'portafolio.cjvfszgmlvra.us-east-1.rds.amazonaws.com:1521/orcl',
+#         'USER': 'restaurant',
+#         'PASSWORD': 'duoc2020',
 #         'TEST': {
 #             'USER': 'default_test',
 #             'TBLSPACE': 'default_test_tbls',
@@ -110,6 +97,19 @@ DATABASES = {
 #         },
 #     },
 # }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.oracle',
+        'NAME': 'localhost/xe',
+        'USER': 'a22',
+        'PASSWORD': 'jeison',
+        'TEST': {
+            'USER': 'default_test',
+            'TBLSPACE': 'default_test_tbls',
+            'TBLSPACE_TMP': 'default_test_tbls_tmp',
+        },
+    },
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators

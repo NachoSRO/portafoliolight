@@ -27,10 +27,3 @@ class Mesa(models.Model):
     
     def __str__(self):
         return self.estado
-
-class Mesa_Cliente(models.Model):
-    Mesa = models.ForeignKey(Mesa,on_delete=models.CASCADE)
-    cliente = models.ForeignKey(Cliente,on_delete=models.CASCADE)
-
-    class Meta:
-        db_table = 'Mesa_Cliente'
