@@ -8,6 +8,9 @@ hooks:
     - location: scripts/install_dependencies.sh
       timeout: 600
       runas: root
+    - location: scripts/collect_static.sh
+      timeout: 600
+      runas: root
     - location: scripts/migrate.sh
       timeout: 1000
       runas: root
