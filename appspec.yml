@@ -9,7 +9,7 @@ hooks:
       timeout: 600
       runas: root
     - location: scripts/collect_static.sh
-      timeout: 600
+      timeout: 500
       runas: root
     - location: scripts/migrate.sh
       timeout: 1000
