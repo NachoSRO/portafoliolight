@@ -3,6 +3,7 @@ from django.views.generic import TemplateView,ListView
 from portafolio.producto.models import *
 from portafolio.usuario.models import *
 from portafolio.cliente.models import *
+from portafolio.app.models import *
 from django.core.serializers import serialize
 from django.contrib.auth.decorators import login_required,permission_required,user_passes_test
 from portafolio.usuario.mixins import LoginYSuperStaffMixin, ValidarPermisosMixin
@@ -16,11 +17,13 @@ def reportes(request):
     clientes = Cliente.objects.all()
     proveedores = Proveedor.objects.all()
     mesas = Mesa.objects.all()
+    orden_compra = Orden_Compra.objects.all()
     data = {
            'productos': productos,
            'usuarios' : usuarios,
            'clientes' : clientes,
            'proveedores' : proveedores,
-           'mesas' : mesas
+           'mesas' : mesas,
+           'orden_compra' : orden_compra
            }
     return render(request, 'reportes/report_producto.html',data)

@@ -189,6 +189,38 @@ table>tbody>tr>td {
         </table>
     </div>
 </div>
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-md-8">
+                <strong class="card-title">Listado de Ordenes de compra</strong>
+            </div>
+        </div>
+        
+    </div>
+    <div class="table-stats order-table ov-h">
+        <table id="tabla_orden" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Numero de factura</th>
+                    <th>Fecha</th>
+                    <th>Total</th>
+                </tr>
+               
+            </thead>
+            <tbody>    
+                {% for ord in orden_compra %}
+                <tr>
+                    <td align=center>{{ ord.num_factura}}</td>
+                    <td align=center>{{ ord.fecha }}</td>
+                    <td align=center>{{ ord.total }}</td>
+                </tr>
+                {% endfor %}         
+            </tbody>
+            
+        </table>
+    </div>
+</div>
 {% endblock body %}
 {% block extrajs %}
 <script src="{% static '/lib//plugins/datatables/jquery.dataTables.min.js' %}"></script>
@@ -201,6 +233,7 @@ table>tbody>tr>td {
 <script src="{% static 'js/reportes/report_clientes.js' %}"></script>
 <script src="{% static 'js/reportes/report_proveedores.js' %}"></script>
 <script src="{% static 'js/reportes/report_mesas.js' %}"></script>
+<script src="{% static 'js/reportes/report_orden.js' %}"></script>
 <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
 <script src="{% static 'js/data-table/dataTables.bootstrap.min.js' %}"></script>
 <script src="{% static 'datatables/Buttons-1.5.6/js/dataTables.buttons.min.js' %}"></script>  
