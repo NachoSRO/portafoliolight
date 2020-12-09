@@ -44,7 +44,7 @@ class FormularioUsuario(forms.ModelForm):
         model = Usuario
         fields = ('email','username','nombres','apellidos','rol','is_staff','is_active')
         labels = {
-                'is_staff': 'personal de administracion?'
+                'is_staff': 'personal de administracion?',
                 'is_active': 'usuario activo?'
         }
         widgets = {
