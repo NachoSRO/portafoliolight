@@ -87,7 +87,7 @@ WSGI_APPLICATION = 'restaurant.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.oracle',
-        'NAME': 'portafolio.cjvfszgmlvra.us-east-1.rds.amazonaws.com:1521/orcl',
+        'NAME': 'portafolio.cqwcroitpioy.us-east-1.rds.amazonaws.com:1521/orcl',
         'USER': 'restaurant',
         'PASSWORD': 'duoc2020',
         'TEST': {
