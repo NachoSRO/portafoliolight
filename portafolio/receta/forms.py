@@ -5,7 +5,7 @@ from django.forms.models import inlineformset_factory
 class FormularioReceta(forms.ModelForm):
     class Meta:
         model = Receta
-        fields = ('nombre','descripcion','tipo','precio')
+        fields = ('nombre','descripcion','tipo','stock','precio')
         widgets = {
             'nombre': forms.TextInput(
                 attrs = {
@@ -27,7 +27,13 @@ class FormularioReceta(forms.ModelForm):
                 attrs = {
                     'class': 'form-control',
                 }
+            ),
+            'stock': forms.NumberInput(
+                attrs = {
+                    'class': 'form-control',
+                }
             ), 
+        }
         }
 
 class FormularioDetalleReceta(forms.ModelForm):
