@@ -34,7 +34,7 @@ class FormularioReceta(forms.ModelForm):
                 }
             ), 
         }
-        }
+        
 
 class FormularioDetalleReceta(forms.ModelForm):
     class Meta:
